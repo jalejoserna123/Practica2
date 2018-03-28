@@ -1,7 +1,7 @@
 #include <iostream>
-
 using namespace std;
-
+//programa que permite al usuario ingresar una matriz cuadrada, imprime la matriz y verifica si la matriz es un cuadrado
+//mágico.
 int main()
 {
     int n, numeros, sumatoria=0, sumatoria1=0, ban = 1;
@@ -30,7 +30,7 @@ int main()
         }
         if(sumatoria1==0){
             sumatoria1=sumatoria;
-        }
+        }                              //Si las sumatorias no son iguales el valor de ban cambia y el condicional se rompe
         if(sumatoria1!=sumatoria){
             ban = 0;
             break;
@@ -57,7 +57,7 @@ int main()
         if((sumatoria)!=sumatoria1){
             ban=0;
         }
-        sumatoria = 0;
+        sumatoria = 0;            //Si las sumatorias no son iguales el valor de ban cambia y el condicional se rompe
         for(int i=0; i<n;i++,t--){
             sumatoria += matriz[i][t];
         }
@@ -78,10 +78,10 @@ int main()
         }
         cout << endl;
     }
-    if(ban==1){
+    if(ban==1){                       //Evaluacion del condicional si es verdadero
         cout << "La matriz es magica" << endl;
     }
-    else{
+    else{                            //Cuando la matriz no es magica
         cout << "La matriz no es magica" << endl;
     }
     return 0;
